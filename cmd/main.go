@@ -25,6 +25,7 @@ func main() {
 
 	server.GET("/products", ProductController.GetProducts)
 	server.POST("/product", ProductController.CreateProduct)
+	server.GET("/product/:productId", ProductController.GetProductById)
 
 	server.GET("/ping", func(ctx *gin.Context) {
 		ctx.JSON(200, gin.H{
